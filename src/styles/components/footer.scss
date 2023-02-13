@@ -1,0 +1,112 @@
+.wrapper {
+  background: #1E1E1E;
+
+  footer {
+    width: 62.3%;
+    margin: auto;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+    main {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 80px;
+      //first
+      .first-logo {
+        .first-logo-logo {
+          width: 148px;
+          height: 32px;
+        }
+
+        .first-l-title {
+          max-width: 270px;
+        }
+
+        .footer-social-media {
+          img {
+            width: 24px;
+            height: 24px;
+            margin-right: 16px;
+          }
+        }
+      }
+
+      //  second
+      .second-courses {
+
+      }
+
+      .fourth-news {
+        .fourth-title {
+          font-style: italic;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          max-width: 324px;
+        }
+
+        .fourth-anc {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: $blue-text;
+          width: 160px;
+          height: 48px;
+          border-radius: 10px;
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+
+          p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            margin-left: 8px;
+
+          }
+        }
+      }
+    }
+
+    //additional footer
+    .footer-addition {
+      display: flex;
+      align-items: center;
+      height: 96px;
+      border-top: 1px solid $grey-text;
+
+      margin-top: 56px;
+
+      .footer-add-logo {
+        width: 110px;
+        height: 24px;
+      }
+
+      .footer-add-title {
+        margin-left: 40px;
+      }
+
+      .footer-add-sec {
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .grey-text {
+    color: $grey-text;
+  }
+}

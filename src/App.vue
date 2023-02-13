@@ -1,8 +1,11 @@
-<script setup>
-</script>
-
 <template>
-  <div>
-    <h1>hello world</h1>
-  </div>
+  <main class="container">
+    <HeaderCom/>
+    <FooterCom/>
+  </main>
 </template>
+
+<script setup>
+import HeaderCom from "./components/Header/HeaderCom.vue";
+import FooterCom from "./components/Footer/FooterCom.vue";
+</script>
