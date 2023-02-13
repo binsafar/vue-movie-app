@@ -3,6 +3,9 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  position: sticky;
+  background: #000000;
+  top: 0;
 
   .left {
     display: flex;

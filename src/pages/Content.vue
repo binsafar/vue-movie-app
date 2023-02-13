@@ -1,12 +1,14 @@
 <template>
   <CommentsCom :load-more="loadMore" :comments='comments' :load-function="load"/>
-  <RecommendedCourse/>
+  <RecommendedCourse :movies="movies"/>
 </template>
 
 <script setup>
-import CommentsCom from "../components/Content/Comments/CommentsCom.vue";
 import {ref} from "vue"
+import CommentsCom from "../components/Content/Comments/CommentsCom.vue";
 import RecommendedCourse from "../components/Content/RecommendedCourse/RecommendedCourse.vue";
+import firstImg from "../assets/img/recvideos/first.png"
+import secondImg from "../assets/img/recvideos/second.png"
 
 function load() {
   comments.value.comments.push(comments.value.comments[0])
@@ -14,6 +16,24 @@ function load() {
 }
 
 const loadMore = ref(true)
+const movies = [
+  {
+    id: 1,
+    img: firstImg,
+    author: 'Rober Reffikin',
+    lessons: 32,
+    duration: 4,
+    type: 'Программа',
+    desc: 'Как генеральный директор и основатель Compass Роберт Реффкин использовал.'
+  },
+  {
+    id: 2,
+    img: secondImg,
+    author: 'Daniel Pink',
+    isAvailable: 'Скоро...',
+    desc: 'Как генеральный директор и основатель Compass Роберт Реффкин использовал.'
+  }
+]
 const comments = ref({
   amount: 32,
   comments: [
