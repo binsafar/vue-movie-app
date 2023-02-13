@@ -2,6 +2,7 @@
   <section class="wrapper">
     <footer>
       <main>
+        <!-- first tab -->
         <div class="first-logo">
           <img class="first-logo-logo" src="../../assets/icon/logo.png" alt="">
           <p class="first-l-title grey-text">Онлайн курсы премиум качества от ведущих мастеров своей сферы </p>
@@ -21,23 +22,44 @@
           </div>
         </div>
 
+        <!-- second tab -->
         <div class="second-courses">
           <p class="grey-text">Все курсы</p>
-          <p>Все курсы</p>
-          <p>Скоро</p>
-          <p>Поиск</p>
-          <p>Блог</p>
+          <a target="_blank" href="https://google.com">
+            <p>Все курсы</p>
+          </a>
+          <a target="_blank" href="https://google.com">
+            <p>Скоро</p>
+          </a>
+          <a target="_blank" href="https://google.com">
+            <p>Поиск</p>
+          </a>
+          <a target="_blank" href="https://google.com">
+            <p>Блог</p>
+          </a>
         </div>
 
+        <!-- third tab -->
         <div class="third-policy">
           <p class="grey-text">Формальности</p>
-          <p>Условия использования</p>
-          <p>Политикой конф.</p>
-          <p>Контакты</p>
-          <p>Чат с поддержкой</p>
-          <p>Оплата</p>
+          <a target="_blank" href="https://google.com">
+            <p>Условия использования</p>
+          </a>
+          <a target="_blank" href="https://google.com">
+            <p>Политикой конф.</p>
+          </a>
+          <a target="_blank" href="https://google.com">
+            <p>Контакты</p>
+          </a>
+          <a target="_blank" href="https://google.com">
+            <p>Чат с поддержкой</p>
+          </a>
+          <a target="_blank" href="https://google.com">
+            <p>Оплата</p>
+          </a>
         </div>
 
+        <!-- fourth tab -->
         <div class="fourth-news">
           <p class="grey-text">Новости</p>
           <p class="fourth-title">Новости, анонсы и скидки в нашем телеграме</p>
@@ -48,8 +70,11 @@
         </div>
       </main>
 
+      <!-- footer logo -->
       <div class="footer-addition">
-        <img class="footer-add-logo" src="../../assets/icon/logo.svg" alt="company logo">
+        <a href="http://google.com" target="_blank">
+          <img class="footer-add-logo" src="../../assets/icon/logo.svg" alt="company logo">
+        </a>
         <p class="footer-add-title grey-text">©{{ new Date().getFullYear() }}</p>
         <div class="footer-add-sec">
           <img src="../../assets/icon/secured.png" alt="secured">

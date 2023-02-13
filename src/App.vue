@@ -1,8 +1,10 @@
 <template>
-  <main class="container">
-    <HeaderCom/>
+  <div class="root-container">
+    <main class="container">
+      <HeaderCom/>
+    </main>
     <FooterCom/>
-  </main>
+  </div>
 </template>
 
 <script setup>

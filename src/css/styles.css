@@ -14,6 +14,17 @@ a {
   text-decoration: none;
 }
 
+.root-container {
+  max-width: 2000px;
+  margin: auto;
+}
+
+.container {
+  max-width: 1540px;
+  width: 80%;
+  margin: auto;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -46,7 +57,7 @@ header .right .header-user-avatar {
   background: #1E1E1E;
 }
 .wrapper footer {
-  width: 62.3%;
+  width: 70%;
   margin: auto;
   font-style: normal;
   font-weight: 500;
@@ -61,14 +72,31 @@ header .right .header-user-avatar {
 .wrapper footer main .first-logo .first-logo-logo {
   width: 148px;
   height: 32px;
+  margin-bottom: 12px;
 }
 .wrapper footer main .first-logo .first-l-title {
   max-width: 270px;
+  margin-bottom: 36px;
 }
 .wrapper footer main .first-logo .footer-social-media img {
   width: 24px;
   height: 24px;
   margin-right: 16px;
+}
+.wrapper footer main .second-courses .grey-text {
+  margin-bottom: 24px;
+}
+.wrapper footer main .second-courses p {
+  margin-bottom: 20px;
+}
+.wrapper footer main .third-policy .grey-text {
+  margin-bottom: 24px;
+}
+.wrapper footer main .third-policy p {
+  margin-bottom: 20px;
+}
+.wrapper footer main .fourth-news .grey-text {
+  margin-bottom: 24px;
 }
 .wrapper footer main .fourth-news .fourth-title {
   font-style: italic;
@@ -76,6 +104,7 @@ header .right .header-user-avatar {
   font-size: 24px;
   line-height: 32px;
   max-width: 324px;
+  margin-bottom: 20px;
 }
 .wrapper footer main .fourth-news .fourth-anc {
   display: flex;
@@ -121,7 +150,8 @@ header .right .header-user-avatar {
   height: 20px;
   margin-right: 8px;
 }
-.wrapper .grey-text {
+
+.grey-text {
   color: rgba(255, 255, 255, 0.4);
 }
 

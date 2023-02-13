@@ -2,7 +2,7 @@
   background: #1E1E1E;
 
   footer {
-    width: 62.3%;
+    width: 70%;
     margin: auto;
 
     font-style: normal;
@@ -19,10 +19,12 @@
         .first-logo-logo {
           width: 148px;
           height: 32px;
+          margin-bottom: 12px;
         }
 
         .first-l-title {
           max-width: 270px;
+          margin-bottom: 36px;
         }
 
         .footer-social-media {
@@ -36,16 +38,37 @@
 
       //  second
       .second-courses {
+        .grey-text {
+          margin-bottom: 24px;
+        }
 
+        p {
+          margin-bottom: 20px;
+        }
+      }
+
+      .third-policy {
+        .grey-text {
+          margin-bottom: 24px;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
       }
 
       .fourth-news {
+        .grey-text {
+          margin-bottom: 24px;
+        }
+
         .fourth-title {
           font-style: italic;
           font-weight: 600;
           font-size: 24px;
           line-height: 32px;
           max-width: 324px;
+          margin-bottom: 20px;
         }
 
         .fourth-anc {
@@ -68,7 +91,6 @@
             font-size: 18px;
             line-height: 24px;
             margin-left: 8px;
-
           }
         }
       }
@@ -105,8 +127,8 @@
       }
     }
   }
+}
 
-  .grey-text {
-    color: $grey-text;
-  }
+.grey-text {
+  color: $grey-text;
 }
