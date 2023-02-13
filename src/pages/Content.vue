@@ -32,7 +32,21 @@ const movies = [
     author: 'Daniel Pink',
     isAvailable: 'Скоро...',
     desc: 'Как генеральный директор и основатель Compass Роберт Реффкин использовал.'
-  }
+  },
+  {
+    id: 3,
+    img: firstImg,
+    author: 'Daniel Pink',
+    isAvailable: 'Скоро...',
+    desc: 'Как генеральный директор и основатель Compass Роберт Реффкин использовал.'
+  },
+  {
+    id: 4,
+    img: secondImg,
+    author: 'Daniel Pink',
+    isAvailable: 'Скоро...',
+    desc: 'Как генеральный директор и основатель Compass Роберт Реффкин использовал.'
+  },
 ]
 const comments = ref({
   amount: 32,

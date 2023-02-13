@@ -112,6 +112,7 @@ button {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   padding-top: 16px;
   margin-bottom: 80px;
+  width: 70%;
 }
 .root-rec .rec-title {
   font-style: normal;
@@ -127,18 +128,20 @@ button {
   max-width: 400px;
   margin: 8px 0 24px 0;
 }
-.root-rec .rec-desc:nth-child(even) .left-img {
-  border-radius: 10px 40% 40% 10px;
-}
 .root-rec .rec-videos {
   display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.root-rec .rec-videos::-webkit-scrollbar {
+  display: none;
 }
 
 .card-wrapper {
   background: rgba(255, 255, 255, 0.04);
   display: flex;
   height: 234px;
-  width: 598px;
+  min-width: 598px;
   margin-right: 32px;
   border-radius: 10px;
 }

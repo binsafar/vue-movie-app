@@ -2,6 +2,7 @@
   border-top: 1px solid $grey-text;
   padding-top: 16px;
   margin-bottom: 80px;
+  width: 70%;
 
   .rec-title {
     font-style: normal;
@@ -17,15 +18,15 @@
     line-height: 22px;
     max-width: 400px;
     margin: 8px 0 24px 0;
-
-    &:nth-child(even) {
-      .left-img {
-        border-radius: 10px 40% 40% 10px;
-      }
-    }
   }
 
   .rec-videos {
     display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
