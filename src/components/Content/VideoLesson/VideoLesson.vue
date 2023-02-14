@@ -2,7 +2,7 @@
   <main class="root-video">
     <!--video content-->
     <div class="left-side">
-      <img :src="lessonDb.img" alt="main">
+      <img class="left-video" :src="lessonDb.img" alt="main">
       <div class="left-side-wrapper">
         <!--left side info-->
         <div class="left-video-content">
@@ -20,16 +20,28 @@
 
     <!--list of lessons-->
     <div class="right-side">
-      <div>hello world</div>
-      <div>hello world</div>
-      <div>hello world</div>
-      <div>hello world</div>
-      <div>hello world</div>
-      <div>hello world</div>
+      <!--lessons-->
+      <div v-for="info in lessonDb.lessons" class="right-lessons">
+        <p class="r-lessons-header">{{ info.name }}</p>
+        <div v-for="lesson in info.lessons"
+             :class="isActive ===  lesson.id ? 'active-back right-lesson-info': 'right-lesson-info'"
+             @click="setActive(lesson.id)">
+          <!--        <div v-for="lesson in info.lessons" :class="" @click="setActive(lesson.id)">-->
+          <div class="rli-wrapper">
+            <p class="r-lessons-title">{{ lesson.name }}</p>
+            <p class="r-lessons-title-d grey-text">{{ lesson.duration }}</p>
+          </div>
+          <p v-if="isActive === lesson.id" class="r-lessons-desc grey-text">{{ lesson.desc }}</p>
+        </div>
+      </div>
     </div>
   </main>
 </template>
 
 <script setup>
 import lessonDb from "../../../service/db/lessonDb.js";
+import {ref} from "vue"
+
+const isActive = ref(1)
+const setActive = (id) => isActive.value = id
 </script>

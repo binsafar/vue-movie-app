@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
 
+    .left-video {
+      width: 100%;
+    }
+
     .left-side-wrapper {
       display: flex;
       align-items: center;
@@ -50,4 +54,59 @@
       }
     }
   }
+
+  .right-side {
+    margin-left: 32px;
+    max-height: 600px;
+    //overflow-y: scroll;
+
+    .right-lessons {
+      min-width: 430px;
+
+      .r-lessons-header {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 10px;
+        padding: 10px 0 10px 24px;
+        margin: 8px 0;
+      }
+
+      .right-lesson-info {
+        cursor: pointer;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 20px 0 20px 24px;
+
+        .rli-wrapper {
+          display: flex;
+          justify-content: space-between;
+
+          .r-lessons-title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+          }
+
+          .r-lessons-title-d {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 22px;
+            margin-right: 14px;
+          }
+        }
+
+        .r-lessons-desc {
+          margin-top: 16px;
+          width: 340px;
+        }
+      }
+    }
+  }
+}
+
+.active-back {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
 }
