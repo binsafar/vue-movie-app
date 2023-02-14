@@ -137,6 +137,50 @@ button {
   display: none;
 }
 
+.root-video {
+  display: flex;
+  margin-bottom: 32px;
+}
+.root-video .left-side {
+  display: flex;
+  flex-direction: column;
+}
+.root-video .left-side .left-side-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+.root-video .left-side .left-side-wrapper .left-video-content .left-video-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #F8A404;
+}
+.root-video .left-side .left-side-wrapper .left-video-content .left-video-header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 4px;
+}
+.root-video .left-side .left-side-wrapper .left-video-content .left-video-desc {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  max-width: 400px;
+  margin-top: 12px;
+}
+.root-video .left-side .left-side-wrapper .right-video-content button {
+  width: 48px;
+  height: 48px;
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .card-wrapper {
   background: rgba(255, 255, 255, 0.04);
   display: flex;
