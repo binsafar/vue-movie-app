@@ -17,6 +17,8 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .root-container {
@@ -29,6 +31,11 @@ button {
   width: 80%;
   margin: auto;
 }
+@media (width <= 495px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+}
 
 .comment-main {
   width: 70%;
@@ -38,6 +45,11 @@ button {
   line-height: 22px;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   padding-top: 16px;
+}
+@media (width <= 600px) {
+  .comment-main {
+    width: 100%;
+  }
 }
 .comment-main img {
   width: 44px;
@@ -114,6 +126,11 @@ button {
   margin-bottom: 80px;
   width: 70%;
 }
+@media (width <= 600px) {
+  .root-rec {
+    width: 100%;
+  }
+}
 .root-rec .rec-title {
   font-style: normal;
   font-weight: 700;
@@ -146,6 +163,7 @@ button {
   flex-direction: column;
 }
 .root-video .left-side .left-video {
+  height: auto;
   width: 100%;
 }
 .root-video .left-side .left-side-wrapper {
@@ -153,6 +171,13 @@ button {
   align-items: center;
   justify-content: space-between;
   margin-top: 32px;
+}
+@media (width < 1700px) {
+  .root-video .left-side .left-side-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 }
 .root-video .left-side .left-side-wrapper .left-video-content .left-video-title {
   font-style: normal;
@@ -176,6 +201,31 @@ button {
   max-width: 400px;
   margin-top: 12px;
 }
+.root-video .left-side .left-side-wrapper .mobile-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+@media (width > 1700px) {
+  .root-video .left-side .left-side-wrapper .mobile-content {
+    display: none;
+  }
+}
+.root-video .left-side .left-side-wrapper .mobile-content button {
+  background: transparent;
+  outline: none;
+  border: none;
+  min-width: 80px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.root-video .left-side .left-side-wrapper .right-video-content .first-ch {
+  margin-right: 16px;
+}
 .root-video .left-side .left-side-wrapper .right-video-content button {
   width: 48px;
   height: 48px;
@@ -183,12 +233,22 @@ button {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 }
+@media (width < 1700px) {
+  .root-video .left-side .left-side-wrapper .right-video-content {
+    display: none;
+  }
+}
 .root-video .right-side {
   margin-left: 32px;
   max-height: 600px;
 }
 .root-video .right-side .right-lessons {
   min-width: 430px;
+}
+@media (width < 1700px) {
+  .root-video .right-side .right-lessons {
+    display: none;
+  }
 }
 .root-video .right-side .right-lessons .r-lessons-header {
   background: rgba(255, 255, 255, 0.06);
@@ -318,10 +378,28 @@ header .right .header-user-avatar {
   font-size: 16px;
   line-height: 22px;
 }
+@media (width <= 495px) {
+  .wrapper footer {
+    width: 100%;
+    text-align: center;
+  }
+}
 .wrapper footer main {
-  display: flex;
-  justify-content: space-between;
   padding-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (width <= 1275px) {
+  .wrapper footer main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+@media (width <= 495px) {
+  .wrapper footer main {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 .wrapper footer main .first-logo .first-logo-logo {
   width: 148px;
@@ -331,6 +409,11 @@ header .right .header-user-avatar {
 .wrapper footer main .first-logo .first-l-title {
   max-width: 270px;
   margin-bottom: 36px;
+}
+@media (width <= 495px) {
+  .wrapper footer main .first-logo .first-l-title {
+    margin: auto;
+  }
 }
 .wrapper footer main .first-logo .footer-social-media img {
   width: 24px;
@@ -360,6 +443,11 @@ header .right .header-user-avatar {
   max-width: 324px;
   margin-bottom: 20px;
 }
+@media (width <= 495px) {
+  .wrapper footer main .fourth-news .fourth-title {
+    margin: auto;
+  }
+}
 .wrapper footer main .fourth-news .fourth-anc {
   display: flex;
   align-items: center;
@@ -380,12 +468,22 @@ header .right .header-user-avatar {
   line-height: 24px;
   margin-left: 8px;
 }
+@media (width <= 495px) {
+  .wrapper footer main .fourth-news .fourth-anc {
+    width: 100%;
+  }
+}
 .wrapper footer .footer-addition {
   display: flex;
   align-items: center;
   height: 96px;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   margin-top: 56px;
+}
+@media (width <= 495px) {
+  .wrapper footer .footer-addition {
+    justify-content: center;
+  }
 }
 .wrapper footer .footer-addition .footer-add-logo {
   width: 110px;

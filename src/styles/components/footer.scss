@@ -4,6 +4,10 @@
   footer {
     width: 70%;
     margin: auto;
+    @media (width <= 495px) {
+      width: 100%;
+      text-align: center;
+    }
 
     font-style: normal;
     font-weight: 500;
@@ -11,9 +15,18 @@
     line-height: 22px;
 
     main {
-      display: flex;
-      justify-content: space-between;
       padding-top: 80px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (width <= 1275px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      @media (width <= 495px) {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
       //first
       .first-logo {
         .first-logo-logo {
@@ -25,6 +38,9 @@
         .first-l-title {
           max-width: 270px;
           margin-bottom: 36px;
+          @media (width <= 495px) {
+            margin: auto;
+          }
         }
 
         .footer-social-media {
@@ -69,6 +85,9 @@
           line-height: 32px;
           max-width: 324px;
           margin-bottom: 20px;
+          @media (width <= 495px) {
+            margin: auto;
+          }
         }
 
         .fourth-anc {
@@ -92,6 +111,10 @@
             line-height: 24px;
             margin-left: 8px;
           }
+
+          @media (width <= 495px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -102,8 +125,11 @@
       align-items: center;
       height: 96px;
       border-top: 1px solid $grey-text;
-
       margin-top: 56px;
+
+      @media (width <= 495px) {
+        justify-content: center;
+      }
 
       .footer-add-logo {
         width: 110px;

@@ -10,9 +10,28 @@
           <p class="left-video-header">{{ lessonDb.lessonName }}</p>
           <p class="left-video-desc grey-text">{{ lessonDb.lessonDesc }}</p>
         </div>
+        <!--mobile content-->
+        <div class="mobile-content">
+          <button>
+            <img src="../../../assets/icon/lesson_icons/play_btn.svg" alt="play">
+            След. Урок
+          </button>
+          <button>
+            <img src="../../../assets/icon/lesson_icons/save_btn.svg" alt="save">
+            Отменить
+          </button>
+          <button>
+            <img src="../../../assets/icon/lesson_icons/comment_btn.svg" alt="comment">
+            Коментарии
+          </button>
+          <button>
+            <img src="../../../assets/icon/lesson_icons/show_lesson_btn.svg" alt="show lessons modal">
+            Все уроки
+          </button>
+        </div>
         <!--right side button-->
         <div class="right-video-content">
-          <button><img src="../../../assets/icon/bookmark.svg" alt=""></button>
+          <button class="first-ch"><img src="../../../assets/icon/bookmark.svg" alt=""></button>
           <button><img src="../../../assets/icon/comments.svg" alt=""></button>
         </div>
       </div>

@@ -18,6 +18,8 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .root-container {
@@ -29,4 +31,7 @@ button {
   max-width: 1540px;
   width: 80%;
   margin: auto;
+  @media (width <= 495px) {
+    width: calc(100% - 32px);
+  }
 }

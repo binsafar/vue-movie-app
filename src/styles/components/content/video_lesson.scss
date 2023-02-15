@@ -7,6 +7,7 @@
     flex-direction: column;
 
     .left-video {
+      height: auto;
       width: 100%;
     }
 
@@ -15,6 +16,11 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 32px;
+      @media (width < 1700px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
 
       .left-video-content {
         .left-video-title {
@@ -43,13 +49,45 @@
         }
       }
 
+      .mobile-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+
+        @media (width > 1700px) {
+          display: none;
+        }
+
+        button {
+          background: transparent;
+          outline: none;
+          border: none;
+          min-width: 80px;
+          min-height: 80px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+
       .right-video-content {
+        .first-ch {
+          margin-right: 16px;
+        }
+
         button {
           width: 48px;
           height: 48px;
           backdrop-filter: blur(4px);
           border-radius: 50%;
           background: rgba(255, 255, 255, 0.1);;
+        }
+
+        @media (width < 1700px) {
+          display: none;
         }
       }
     }
@@ -62,6 +100,9 @@
 
     .right-lessons {
       min-width: 430px;
+      @media (width < 1700px) {
+        display: none;
+      }
 
       .r-lessons-header {
         background: rgba(255, 255, 255, 0.06);
