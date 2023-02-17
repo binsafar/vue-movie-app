@@ -38,7 +38,7 @@ button {
 }
 
 .comment-main {
-  width: 70%;
+  width: calc(70% - 32px);
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -282,6 +282,67 @@ button {
 .root-video .right-side .right-lessons .right-lesson-info .r-lessons-desc {
   margin-top: 16px;
   width: 340px;
+}
+.root-video .right-side .right-card-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.root-video .right-side .right-card-info .right-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  width: 208px;
+  height: 114px;
+}
+.root-video .right-side .right-card-info .right-card .rc-wrapper {
+  padding: 16px;
+}
+.root-video .right-side .right-card-info .right-card .rc-wrapper img {
+  height: 48px;
+  width: 48px;
+}
+.root-video .right-side .right-card-info .author {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+.root-video .right-side .right-card-info .author img {
+  margin-bottom: 14px;
+}
+.root-video .right-side .right-card-info .lesson-score .ls-score-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 22px;
+}
+.root-video .right-side .right-card-info .lesson-score .ls-score-title span {
+  font-size: 24px;
+}
+.root-video .right-side .right-card-info .lessons .rc-wrapper {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+.root-video .right-side .right-card-info .lessons .rc-wrapper .lesson-number {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 22px;
+}
+.root-video .right-side .right-card-info .student .rc-wrapper {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+.root-video .right-side .right-card-info .student .rc-wrapper img {
+  margin-bottom: 14px;
 }
 
 .active-back {

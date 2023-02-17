@@ -143,6 +143,86 @@
         }
       }
     }
+
+    .right-card-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+
+      .right-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 10px;
+        width: 208px;
+        height: 114px;
+
+        .rc-wrapper {
+          padding: 16px;
+
+          img {
+            height: 48px;
+            width: 48px;
+          }
+        }
+      }
+
+      .author {
+        img {
+          margin-bottom: 14px;
+        }
+
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      .lesson-score {
+        .ls-score-title {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 40px;
+          margin-bottom: 22px;
+
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .lessons {
+        .rc-wrapper {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 20px;
+
+          .lesson-number {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 22px;
+          }
+        }
+      }
+
+      .student {
+        .rc-wrapper {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 20px;
+
+          img {
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
   }
 }
 
