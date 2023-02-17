@@ -11,7 +11,7 @@
           <p class="left-video-desc grey-text">{{ lessonDb.lessonDesc }}</p>
         </div>
         <!--mobile content-->
-        <div :class="showModal === true ? 'show-modal mobile-content':'mobile-content'">
+        <div :class="isModal === true ? 'show-modal mobile-content':'mobile-content'">
           <button>
             <img src="../../../assets/icon/lesson_icons/play_btn.svg" alt="play">
             След. Урок
@@ -24,7 +24,7 @@
             <img src="../../../assets/icon/lesson_icons/comment_btn.svg" alt="comment">
             Коментарии
           </button>
-          <button @click="showModal !== showModal">
+          <button @click="isModal = true">
             <img src="../../../assets/icon/lesson_icons/show_lesson_btn.svg" alt="show lessons modal">
             Все уроки
           </button>
@@ -38,64 +38,74 @@
     </div>
 
     <!--list of lessons-->
-    <div class="right-side">
-      <!--lessons-->
-      <div class="right-lessons-wrapper">
-        <div v-for="info in lessonDb.lessons" class="right-lessons">
-          <p class="r-lessons-header">{{ info.name }}</p>
-          <div v-for="lesson in info.lessons"
-               :class="isActive ===  lesson.id ? 'active-back right-lesson-info': 'right-lesson-info'"
-               @click="setActive(lesson.id)">
-            <!--        <div v-for="lesson in info.lessons" :class="" @click="setActive(lesson.id)">-->
-            <div class="rli-wrapper">
-              <p class="r-lessons-title">{{ lesson.name }}</p>
-              <p class="r-lessons-title-d grey-text">{{ lesson.duration }}</p>
+    <swipe-modal
+        v-model="isModal"
+        contents-height="50vh"
+        border-top-radius="16px"
+        dark
+    >
+      <div :class="isModal ?  'display right-side rc-res' : 'right-side rc-res'">
+        <!--lessons-->
+        <div class="right-lessons-wrapper">
+          <div v-for="info in lessonDb.lessons" class="right-lessons">
+            <p class="r-lessons-header">{{ info.name }}</p>
+            <div v-for="lesson in info.lessons"
+                 :class="isActive ===  lesson.id ? 'active-back right-lesson-info': 'right-lesson-info'"
+                 @click="setActive(lesson.id)">
+              <!--        <div v-for="lesson in info.lessons" :class="" @click="setActive(lesson.id)">-->
+              <div class="rli-wrapper">
+                <p class="r-lessons-title">{{ lesson.name }}</p>
+                <p class="r-lessons-title-d grey-text">{{ lesson.duration }}</p>
+              </div>
+              <p v-if="isActive === lesson.id" class="r-lessons-desc grey-text">{{ lesson.desc }}</p>
             </div>
-            <p v-if="isActive === lesson.id" class="r-lessons-desc grey-text">{{ lesson.desc }}</p>
+          </div>
+        </div>
+        <!--lesson cards-->
+        <div class="right-card-info">
+          <div class="right-card author">
+            <div class="rc-wrapper">
+              <img class="teacher-img" :src="lessonDb.cardsInfo.author.img" alt="avatar">
+              <p>{{ lessonDb.cardsInfo.author.name }}</p>
+            </div>
+          </div>
+
+          <div class="right-card lesson-score">
+            <div class="rc-wrapper">
+              <p class="ls-score-title">{{ lessonDb.cardsInfo.lessonScore.completed }}
+                <span class="grey-text">/ {{ lessonDb.cardsInfo.lessonScore.total }}</span>
+              </p>
+              <p>Уроков завершено</p>
+            </div>
+          </div>
+
+          <div class="right-card lessons">
+            <div class="rc-wrapper">
+              <p class="lesson-number">{{ lessonDb.cardsInfo.lessons.amount }}</p>
+              <p>Урока за сегодня</p>
+            </div>
+          </div>
+
+          <div class="right-card student">
+            <div class="rc-wrapper">
+              <img :src="lessonDb.cardsInfo.student.img" alt="">
+              <p>{{ lessonDb.cardsInfo.student.name }}</p>
+            </div>
           </div>
         </div>
       </div>
-      <!--lesson cards-->
-      <div class="right-card-info">
-        <div class="right-card author">
-          <div class="rc-wrapper">
-            <img class="teacher-img" :src="lessonDb.cardsInfo.author.img" alt="avatar">
-            <p>{{ lessonDb.cardsInfo.author.name }}</p>
-          </div>
-        </div>
-
-        <div class="right-card lesson-score">
-          <div class="rc-wrapper">
-            <p class="ls-score-title">{{ lessonDb.cardsInfo.lessonScore.completed }}
-              <span class="grey-text">/ {{ lessonDb.cardsInfo.lessonScore.total }}</span>
-            </p>
-            <p>Уроков завершено</p>
-          </div>
-        </div>
-
-        <div class="right-card lessons">
-          <div class="rc-wrapper">
-            <p class="lesson-number">{{ lessonDb.cardsInfo.lessons.amount }}</p>
-            <p>Урока за сегодня</p>
-          </div>
-        </div>
-
-        <div class="right-card student">
-          <div class="rc-wrapper">
-            <img :src="lessonDb.cardsInfo.student.img" alt="">
-            <p>{{ lessonDb.cardsInfo.student.name }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </swipe-modal>
+    <SwipeAble/>
   </main>
 </template>
 
 <script setup>
 import lessonDb from "../../../service/db/lessonDb.js";
+import swipeModal from "@takuma-ru/vue-swipe-modal";
 import {ref} from "vue"
+import SwipeAble from "../swipeable/SwipeAble.vue";
 
 const isActive = ref(1)
-const showModal = ref(true);
+const isModal = ref(false);
 const setActive = (id) => isActive.value = id
 </script>
