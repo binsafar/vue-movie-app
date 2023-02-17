@@ -40,17 +40,19 @@
     <!--list of lessons-->
     <div class="right-side">
       <!--lessons-->
-      <div v-for="info in lessonDb.lessons" class="right-lessons">
-        <p class="r-lessons-header">{{ info.name }}</p>
-        <div v-for="lesson in info.lessons"
-             :class="isActive ===  lesson.id ? 'active-back right-lesson-info': 'right-lesson-info'"
-             @click="setActive(lesson.id)">
-          <!--        <div v-for="lesson in info.lessons" :class="" @click="setActive(lesson.id)">-->
-          <div class="rli-wrapper">
-            <p class="r-lessons-title">{{ lesson.name }}</p>
-            <p class="r-lessons-title-d grey-text">{{ lesson.duration }}</p>
+      <div class="right-lessons-wrapper">
+        <div v-for="info in lessonDb.lessons" class="right-lessons">
+          <p class="r-lessons-header">{{ info.name }}</p>
+          <div v-for="lesson in info.lessons"
+               :class="isActive ===  lesson.id ? 'active-back right-lesson-info': 'right-lesson-info'"
+               @click="setActive(lesson.id)">
+            <!--        <div v-for="lesson in info.lessons" :class="" @click="setActive(lesson.id)">-->
+            <div class="rli-wrapper">
+              <p class="r-lessons-title">{{ lesson.name }}</p>
+              <p class="r-lessons-title-d grey-text">{{ lesson.duration }}</p>
+            </div>
+            <p v-if="isActive === lesson.id" class="r-lessons-desc grey-text">{{ lesson.desc }}</p>
           </div>
-          <p v-if="isActive === lesson.id" class="r-lessons-desc grey-text">{{ lesson.desc }}</p>
         </div>
       </div>
       <!--lesson cards-->

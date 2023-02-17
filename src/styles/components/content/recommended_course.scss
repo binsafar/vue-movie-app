@@ -3,6 +3,8 @@
   padding-top: 16px;
   margin-bottom: 80px;
   width: 70%;
+  overflow-x: scroll;
+
   @media (width <= 600px) {
     width: 100%;
   }

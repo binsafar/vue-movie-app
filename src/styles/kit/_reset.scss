@@ -35,3 +35,27 @@ button {
     width: calc(100% - 32px);
   }
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 0;
+  border: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  //background: inherit;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

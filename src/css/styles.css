@@ -37,6 +37,29 @@ button {
   }
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+  height: 0;
+  border: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .comment-main {
   width: calc(70% - 32px);
   font-style: normal;
@@ -125,6 +148,7 @@ button {
   padding-top: 16px;
   margin-bottom: 80px;
   width: 70%;
+  overflow-x: scroll;
 }
 @media (width <= 600px) {
   .root-rec {
@@ -240,46 +264,51 @@ button {
 }
 .root-video .right-side {
   margin-left: 32px;
-  max-height: 600px;
-}
-.root-video .right-side .right-lessons {
-  min-width: 430px;
 }
 @media (width < 1700px) {
-  .root-video .right-side .right-lessons {
+  .root-video .right-side {
     display: none;
   }
 }
-.root-video .right-side .right-lessons .r-lessons-header {
+.root-video .right-side .right-lessons-wrapper {
+  max-height: 600px;
+  overflow-y: scroll;
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0) 0%, rgba(8, 8, 8, 0.83) 63.54%, #080808 100%);
+  margin-bottom: 48px;
+}
+.root-video .right-side .right-lessons-wrapper .right-lessons {
+  min-width: 430px;
+}
+.root-video .right-side .right-lessons-wrapper .right-lessons .r-lessons-header {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 10px;
   padding: 10px 0 10px 24px;
   margin: 8px 0;
 }
-.root-video .right-side .right-lessons .right-lesson-info {
+.root-video .right-side .right-lessons-wrapper .right-lessons .right-lesson-info {
   cursor: pointer;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 20px 0 20px 24px;
 }
-.root-video .right-side .right-lessons .right-lesson-info .rli-wrapper {
+.root-video .right-side .right-lessons-wrapper .right-lessons .right-lesson-info .rli-wrapper {
   display: flex;
   justify-content: space-between;
 }
-.root-video .right-side .right-lessons .right-lesson-info .rli-wrapper .r-lessons-title {
+.root-video .right-side .right-lessons-wrapper .right-lessons .right-lesson-info .rli-wrapper .r-lessons-title {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
 }
-.root-video .right-side .right-lessons .right-lesson-info .rli-wrapper .r-lessons-title-d {
+.root-video .right-side .right-lessons-wrapper .right-lessons .right-lesson-info .rli-wrapper .r-lessons-title-d {
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
   margin-right: 14px;
 }
-.root-video .right-side .right-lessons .right-lesson-info .r-lessons-desc {
+.root-video .right-side .right-lessons-wrapper .right-lessons .right-lesson-info .r-lessons-desc {
   margin-top: 16px;
   width: 340px;
 }
